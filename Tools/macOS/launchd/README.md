@@ -31,5 +31,4 @@ macOS に標準搭載されているサービス管理フレームワーク「la
 
 ## リンク
 
-- [launchd.plist のマニュアルページ](x-man-page://launchd.plist)
-  - 上記リンクをクリックすると、ターミナルが起動してローカルにあるマニュアルが表示されます（英語）
+- [Macの「ターミナル」でのlaunchdを使ったスクリプトの管理 - Apple サポート (日本)](https://support.apple.com/ja-jp/guide/terminal/apdc6c1077b-5d5d-4d35-9c19-60f2397b2369/mac)

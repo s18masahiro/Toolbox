@@ -114,3 +114,10 @@ HomebrewPackageChecker/
 ```
 
 更新する場合はレポート末尾の案内どおり `brew upgrade`（cask も含めるなら `brew upgrade --greedy`）を手動で実行してください。
+
+## オプション：Claude Cowork でリリースノートをまとめる
+
+更新可能なパッケージのリリースノートまで調べた詳細レポートを Claude Cowork で定期的に作りたい場合は、[brew-release-notes](../../../../AI-Instructions/Claude/brew-release-notes/README.md) スキルを利用してください。
+
+- このツールのレポート（`brew-check-YYYY-MM-DD.md`）を読み、セキュリティ修正・破壊的変更をまとめた `release-notes-YYYY-MM-DD.md` を同じフォルダに書き出します
+- Cowork のセッションまたはプロジェクトに、`reports/` フォルダを紐づけて使います

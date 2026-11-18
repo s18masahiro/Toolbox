@@ -605,7 +605,7 @@ Dependabot は <曜日 時刻> に実行し、このレビューは <曜日 時�
 2. `count` が 0 なら issue は作らず「今週の Dependabot PR はありません」と返す。
 3. A/B の PR と minor・major 更新の PR は `gh pr view N --json body` でリリースノートを読み、破壊的変更や非推奨になった API をソースで grep する。判定を変えた場合は理由を書く。
 4. review-config.json のどこにも出てこない新しい依存が PR に含まれていたら、「判定基準に未登録」とレポートに書き、`inventory.py` の再実行を提案する。
-5. 付録 D のテンプレートで `$TMPDIR/depbot-report.md` を作る。
+5. 付録 D のテンプレートで `$TMPDIR/depbot-report.md` を作る。「## 推奨マージ順」の直下（表の前）には、判定区分の凡例行を毎回必ず入れる。
 6. 同じタイトルの issue がないか確認してから作成する:
    gh label create <label> --color 0366d6 2>/dev/null || true
    gh issue list --label <label> --state all --search "<title> in:title" --json number -q length
@@ -641,6 +641,8 @@ order_rank の昇順。同じ順位の中では、セキュリティ修正 → �
 - 判定基準に未登録の依存: <あれば>
 
 ## 推奨マージ順
+判定: A プレビュー必須 / B プレビュー推奨（minor・major のみ） / S ローカル確認のみ / C CI 通過でマージ可
+
 | 順 | PR | 内容 | 種別 | 判定 | CI | 備考 |
 |---|---|---|---|---|---|---|
 
